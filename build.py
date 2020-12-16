@@ -4,9 +4,7 @@ import traceback
 
 if __name__ == "__main__":
     try:
-        reference = "%s/%s" % get_name_and_version()
-        print("reference: %s" % reference)
-        builder = ConanMultiPackager(reference=reference, out=hidesensitive)
+        builder = ConanMultiPackager(reference="%s/%s" % get_name_and_version(), out=hidesensitive)
         builder.add_common_builds(pure_c=False)
         builder.run()
     except Exception as e:
