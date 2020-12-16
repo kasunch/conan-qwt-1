@@ -54,6 +54,7 @@ class QwtConan(ConanFile):
     def source(self):
         source_folder = os.path.join(self.source_folder, self.name)
         svn = tools.SVN(folder=source_folder)
+        print(self.conan_data["sources"])
         svn.checkout(**self.conan_data["sources"][self.version])
 
     def requirements(self):
