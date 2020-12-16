@@ -3,10 +3,10 @@ sources:
     url: "https://svn.code.sf.net/p/qwt/code/branches/qwt-6.2"
     revision: "HEAD"
   "6.1.0-multiaxes-svn":
-    url: "https://svn.code.sf.net/p/qwt/code/branches/qwt-6.1"
+    url: "https://svn.code.sf.net/p/qwt/code/branches/qwt-6.1-multiaxes"
     revision: "HEAD"
   "6.1.0-svn":
-    url: "https://svn.code.sf.net/p/qwt/code/branches/qwt-6.1-multiaxes"
+    url: "https://svn.code.sf.net/p/qwt/code/branches/qwt-6.1"
     revision: "HEAD"
   "6.1.4":
     url: "https://svn.code.sf.net/p/qwt/code/tags/qwt-6.1.4"
