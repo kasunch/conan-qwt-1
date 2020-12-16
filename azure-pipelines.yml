@@ -1,0 +1,30 @@
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: blixttech/conan-templates
+      ref: main
+      endpoint: conan-packages
+
+extends:
+  template: ci/azure-pipelines-template.yml@templates
+  parameters:
+    # Common build settings
+    conanArchs: "x86_64"
+    conanBuildTypes: "Release"
+    conanOptions: "qwt:shared=False"  # Build only the shared libraries
+    conanSharedOptionName: "False"            # Disable automatic build combination generation
+    conanStableBranchPattern: "stable/*"
+    # GCC specific
+    enableLinuxGCCBuilds: true
+    linuxGCCVersions: "7"
+    # Visual Studio specific
+    enableVsBuilds: true
+    vsVersions: "16"
+    conanVsRuntimes: "MD"
+    # Apple clang specific
+    enableAppleClangBuilds: true
+    appleClangVersions: "10"
+    # CI specific settings
+    splitByBuildTypes: true
+    requireMoreDiskSpace: true
