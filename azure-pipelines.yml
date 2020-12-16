@@ -16,10 +16,10 @@ extends:
     conanSharedOptionName: "False"            # Disable automatic build combination generation
     conanStableBranchPattern: "stable/*"
     # GCC specific
-    enableLinuxGCCBuilds: true
+    enableLinuxGCCBuilds: false
     linuxGCCVersions: "7"
     # Visual Studio specific
-    enableVsBuilds: true
+    enableVsBuilds: false
     vsVersions: "16"
     conanVsRuntimes: "MD"
     # Apple clang specific
